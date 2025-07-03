@@ -6,11 +6,11 @@ public class RegistroFrom extends JFrame {
     private JPanel registroPanel;
     private JButton guardarButton;
     private JButton limpiarButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
+    private JTextField codigoText;
+    private JTextField nombreText;
+    private JTextField detalleText;
+    private JTextField precioText;
+    private JTextField stockText;
     private JButton regresarButton;
 
     public RegistroFrom() {
@@ -24,12 +24,40 @@ public class RegistroFrom extends JFrame {
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String codigo = codigoText.getText();
+                String nombre = nombreText.getText();
+                String detalle = detalleText.getText();
+                double precio = Double.parseDouble(precioText.getText());
+                int stock = Integer.parseInt(stockText.getText());
+
+
+                if (codigo.equals("")||nombre.equals("")||detalle.equals("")||precio==0||stock==0) {
+                    JOptionPane.showMessageDialog(null,"Los campos son obligatorios","Error",JOptionPane.ERROR_MESSAGE);
+                }else {
+                    JOptionPane.showMessageDialog(null, "Registro guardado exitosamente");
+                    MostrarFrom mostrar = new MostrarFrom(codigo,nombre, detalle,stock);
+                    codigoText.setText("");
+                    nombreText.setText("");
+                    detalleText.setText("");
+                    precioText.setText("");
+                    stockText.setText("");
+                }
+                if(precio > 1000){
+                    JOptionPane.showMessageDialog(null,"Precio no puede ser mayor que 1000");
+                }else if (stock > 100){
+                    JOptionPane.showMessageDialog(null,"Stock no puede ser mayor que 100");
+                }
 
             }
         });
         limpiarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                codigoText.setText("");
+                nombreText.setText("");
+                detalleText.setText("");
+                precioText.setText("");
+                stockText.setText("");
 
             }
         });

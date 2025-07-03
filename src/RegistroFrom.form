@@ -72,7 +72,7 @@
           <text value="Limpiar"/>
         </properties>
       </component>
-      <component id="6e61d" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="6e61d" class="javax.swing.JTextField" binding="codigoText">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -80,15 +80,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="62a6d" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-        <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="35710" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="35710" class="javax.swing.JTextField" binding="detalleText">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -96,7 +88,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="e9e00" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="e9e00" class="javax.swing.JTextField" binding="precioText">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -104,7 +96,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="5f18a" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+      <component id="5f18a" class="javax.swing.JTextField" binding="stockText">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -119,6 +111,14 @@
         <properties>
           <text value="REGRESAR AL MENU"/>
         </properties>
+      </component>
+      <component id="62a6d" class="javax.swing.JTextField" binding="nombreText">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
       </component>
     </children>
   </grid>

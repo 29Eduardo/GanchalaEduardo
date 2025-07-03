@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,14 +23,14 @@ public class LoginForm extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 String user = userText.getText();
                 String pass = passwordText.getText();
-                if(user.equals("ganchala") && pass.equals("esfot123")){
+                if(!user.equals("ganchala") && !pass.equals("esfot123")){
+                    JOptionPane.showMessageDialog(null, "Credenciales incorrectas","ERROR",JOptionPane.ERROR_MESSAGE);
+                }else if(user.isEmpty() || pass.isEmpty() ){
+                    JOptionPane.showMessageDialog(null,"Los campos son obligatorios","ERROR",JOptionPane.ERROR_MESSAGE);
+                }else if(user.equals("ganchala") && pass.equals("esfot123")){
                     MenuForm menu = new MenuForm();
                     setVisible(true);
                     dispose();
-                }else if(user.isEmpty() || pass.isEmpty() ){
-                    JOptionPane.showMessageDialog(null,"Los campos son obligatorios","ERROR",JOptionPane.ERROR_MESSAGE);
-                }else if(!user.equals("ganchala") && !pass.equals("esfot123")){
-                    JOptionPane.showMessageDialog(null,"Credenciales incorrectas","ERROR",JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
