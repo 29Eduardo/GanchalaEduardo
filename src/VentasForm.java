@@ -29,7 +29,7 @@ public class VentasForm extends JFrame {
                 String nombre = productoText.getText();
                 double precio = Integer.parseInt(precioText.getText().trim());
                 int cantidad = Integer.parseInt(cantidadText.getText().trim());
-                double subtotal = 0,total = 0;
+                double subtotal = 0;
                 subtotal += Double.parseDouble(precioText.getText().trim());
                 double impuestos = subtotal * 0.15;
                 double total = impuestos + subtotal;
